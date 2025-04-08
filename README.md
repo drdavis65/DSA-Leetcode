@@ -9,5 +9,6 @@ This repo includes my personal solutions to a wide variety of LeetCode problems,
 ## Languages Used
 
 - Python
-- C++ 
+- C/C++
+- 
 *(More may be added as I go)*
