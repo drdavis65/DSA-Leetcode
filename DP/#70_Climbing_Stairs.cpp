@@ -1,4 +1,4 @@
-// Date last reviewed
+// Date last reviewed:
 // 4/9/2025
 // =======================================================
 class Solution {
@@ -12,5 +12,4 @@ public:
         }
         return steps[n&3];
     }
-    
 };
