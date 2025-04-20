@@ -1,5 +1,5 @@
 // Date last reviewed:
-// 4/17/2025
+// 4/19/2025
 // ==================================================
 /**
  * Definition for a binary tree node.
@@ -39,3 +39,23 @@ public:
         return result;
     }
 };
+
+// RECURSIVE SOLUTION
+// class Solution {
+// public:
+//     vector<int> preorderTraversal(TreeNode* root) {
+//         std::vector<int> result;
+        
+//         helper(root,result);
+        
+//         return result;
+//     }
+
+//     void helper(TreeNode* root, vector<int> &result) {
+//         if(!root) return;
+
+//         result.push_back(root->val);
+//         helper(root->left,result);
+//         helper(root->right,result);
+//     }
+// };
