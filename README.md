@@ -1,6 +1,6 @@
 # LeetCode Practice Solutions
 
-Welcome to my LeetCode practice repo! This repository is where I post my solutions to coding problems from [LeetCode](https://leetcode.com/), as a way to improve my problem-solving skills and keep track of progress over time.
+Welcome to my LeetCode practice repo. This repository is where I post my solutions to coding problems from [LeetCode](https://leetcode.com/), as a way to improve my problem-solving skills and keep track of progress over time.
 
 ## About
 
