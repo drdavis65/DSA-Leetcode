@@ -1,3 +1,4 @@
+# O(n^2)
 class Solution:
     def countStudents(self, students: List[int], sandwiches: List[int]) -> int:
         queue = deque(students)
@@ -15,3 +16,15 @@ class Solution:
                 break
         return n
 
+# O(n)
+class Solution:
+    def countStudents(self, students: List[int], sandwiches: List[int]) -> int:
+        count = Counter(students)
+        res = len(students)
+        for sandwich in sandwiches:
+            if count[sandwich] > 0:
+                res -= 1
+                count[sandwich] -= 1
+            else:
+                break
+        return res
