@@ -38,6 +38,12 @@ public:
     int ret = heap[1];
     heap[1] = heap.pop();
     i = 1;
+    percolate_down(i);
+    return ret;
+  }
+  
+  void percolate_down(int i) 
+  {
     while(2 * i < heap.size()) 
     {
       if(2 * i + 1 < heap.size() && 
@@ -60,8 +66,17 @@ public:
         break;
       }
     }
-    return ret;
-  }
 
+    void heapify(vector<int> arr) {
+      arr.push_back(arr[0]);
+      heap = arr;
+      int curr = (heap.size() - 1) >> 1;
+      while(curr > 0) {
+        int i = curr;
+        percolate_down(i);
+        curr--;
+      }
+    }
+  }
 
 };
