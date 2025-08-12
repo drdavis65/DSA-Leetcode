@@ -1,5 +1,6 @@
 #include <stdexcept>
 #include <iostream>
+#include <vector>
 
 class min_heap 
 {
@@ -36,9 +37,9 @@ public:
       return heap.pop();
     }
     int ret = heap[1];
-    heap[1] = heap.pop();
-    i = 1;
-    percolate_down(i);
+    heap[1] = heap.back();
+    heap.pop_back();
+    percolate_down(1);
     return ret;
   }
   
@@ -67,13 +68,12 @@ public:
       }
     }
 
-    void heapify(vector<int> arr) {
+    void heapify(vector<int>& arr) {
       arr.push_back(arr[0]);
       heap = arr;
       int curr = (heap.size() - 1) >> 1;
       while(curr > 0) {
-        int i = curr;
-        percolate_down(i);
+        percolate_down(curr);
         curr--;
       }
     }
