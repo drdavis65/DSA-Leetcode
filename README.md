@@ -4,11 +4,11 @@ Welcome to my LeetCode practice repo. This repository is where I post my solutio
 
 ## About
 
-This repo includes my personal solutions to a wide variety of LeetCode problems, categorized by difficulty and topic (e.g., Arrays, Strings, Dynamic Programming, Trees, Graphs, etc.). I aim to write clean, readable code with comments where helpful, and sometimes include multiple approaches for the same problem.
+This repo includes my personal solutions to a wide variety of LeetCode problems, categorized by difficulty and/or topic (e.g., Arrays, Strings, Dynamic Programming, Trees, Graphs, etc.). I aim to write clean, readable code with comments where helpful, and sometimes include multiple approaches for the same problem.
 
 ## Languages Used
 
 - Python
 - C/C++
-- 
+- Rust
 *(More may be added as I go)*
