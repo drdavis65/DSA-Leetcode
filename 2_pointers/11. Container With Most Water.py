@@ -3,10 +3,13 @@ class Solution:
         L = 0
         R = len(heights) - 1
         res = 0
+        area = 0
         while L < R:
-            res = max((R-L) * min(heights[R], heights[L]), res)
             if heights[R] < heights[L]:
+                area = (R-L)*heights[R]
                 R -= 1
             else:
+                area = (R-L)*heights[L]
                 L += 1
+            res = max(area, res)
         return res
