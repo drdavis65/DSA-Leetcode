@@ -26,3 +26,5 @@ class Solution:
             return left or right
 
         return dfs(root, subRoot)
+
+# Next time try bfs
