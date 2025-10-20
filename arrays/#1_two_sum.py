@@ -1,9 +1,9 @@
 class Solution:
     def twoSum(self, nums: List[int], target: int) -> List[int]:
-        myNums = dict()
-
+        d = dict()
         for i in range(len(nums)):
-            if target - nums[i] in myNums:
-                return [i, myNums[target-nums[i]]]
-            myNums[nums[i]] = i
-        return []
+            comp = target - nums[i]
+            if comp in d:
+                return [d[comp], i]
+            d[nums[i]] = i
+        return [-1,-1]
