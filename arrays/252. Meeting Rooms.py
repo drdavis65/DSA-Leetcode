@@ -8,9 +8,9 @@ class Solution:
 
 class Solution:
     def canAttendMeetings(self, intervals: List[Interval]) -> bool:
-        sched = sorted(intervals, key=lambda x: x.start)
+        intervals.sort(key=lambda x: x.start)
         prev = -1
-        for meeting in sched:
+        for meeting in intervals:
             if prev > meeting.start:
                 return False
             prev = meeting.end
