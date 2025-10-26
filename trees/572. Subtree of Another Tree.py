@@ -14,17 +14,12 @@ class Solution:
                 return False
             return sameTree(p.left, q.left) and sameTree(p.right, q.right)
         
-        def dfs(root, subRoot):
-            if root == None:
-                return False
-            if root.val == subRoot.val:
-                if sameTree(root, subRoot):
-                    return True
-            left = dfs(root.left, subRoot)
-            right = dfs(root.right, subRoot)
+        if not subRoot:
+            return True
+        if not root:
+            return False
 
-            return left or right
+        if sameTree(root, subRoot):
+            return True
 
-        return dfs(root, subRoot)
-
-# Next time try bfs
+        return self.isSubtree(root.left, subRoot) or self.isSubtree(root.right ,subRoot)
