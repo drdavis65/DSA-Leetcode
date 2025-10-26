@@ -5,3 +5,13 @@ class Solution:
             if intervals[i][0] < intervals[i-1][1]:
                 return False
         return True
+
+class Solution:
+    def canAttendMeetings(self, intervals: List[Interval]) -> bool:
+        sched = sorted(intervals, key=lambda x: x.start)
+        prev = -1
+        for meeting in sched:
+            if prev > meeting.start:
+                return False
+            prev = meeting.end
+        return True
