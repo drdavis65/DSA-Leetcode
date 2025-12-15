@@ -1,22 +1,22 @@
+#include <array>
+
 class Solution {
 public:
-    vector<vector<string>> groupAnagrams(vector<string>& strs) {
-        unordered_map<string,vector<string>> map;
-        for(const auto& str : strs) {
-            vector<int> freq(26, 0);
-            for(char ch : str) {
-                freq[ch - 'a']++;
+    std::vector<std::vector<std::string>> groupAnagrams(std::vector<std::string>& strs) {
+        std::unordered_map<std::string, std::vector<std::string>> str_map;
+        for(const auto &str : strs) {
+            std::array<int, 26> sig{};
+            for(auto ch : str) {
+                sig[ch - 'a']++;
             }
-            string key = to_string(freq[0]);
-            for(int i = 1; i < 26; i++) {
-                key += ',' + to_string(freq[i]);
-            }
-            map[key].push_back(str);
+            std::string key;
+            std::for_each(sig.cbegin(), sig.cend(), [&key](const auto &freq){key += std::to_string(freq) + ",";});
+            str_map[key].push_back(str);
         }
-        vector<vector<string>> res;
-        for(const auto& freq : map) {
-            res.push_back(freq.second);
+        std::vector<std::vector<std::string>> result;
+        for(const auto &item : str_map) {
+            result.push_back(item.second);
         }
-        return res;
+        return result;
     }
 };
