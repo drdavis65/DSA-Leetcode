@@ -2,7 +2,7 @@ class Solution {
 public:
     int lengthOfLongestSubstring(string s) {
         if (s.size() == 0) return 0;
-        std::set<int> c;
+        std::set<char> c;
         size_t i = 0;
         int max = 0;
         for(size_t j{0}; j < s.size(); j++) {
