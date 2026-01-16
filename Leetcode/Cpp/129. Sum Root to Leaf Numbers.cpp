@@ -16,16 +16,16 @@ public:
         helper(root, 0, sum);
         return sum;
     }
-    void helper(TreeNode* root, int curr, int& sum) {
+    void helper(TreeNode* root, long curr, int& sum) {
         if(!root->left && !root->right) {
             sum += (curr + root->val);
         }
-        int newCurr = (curr + root->val);
+        long newCurr = (curr + root->val) * 10;
         if(root->left) {
-            helper(root->left, newCurr * 10, sum);
+            helper(root->left, newCurr, sum);
         }
         if(root->right) {
-            helper(root->right, newCurr * 10, sum);
+            helper(root->right, newCurr, sum);
         }
     }
 };
